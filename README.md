@@ -14,14 +14,14 @@ AutoStructor: A Generative AI-Based Framework for Automated Program Repair with 
 
 ## 2. DESIGN QUALITY METRICS
 
-| Metric Name | Description | Range | Normalization |
-|-------------|-------------|-------|---------------|
-| SRP Score | Single Responsibility Principle adherence | 0-1 | Already normalized |
-| Afferent Coupling | Number of incoming dependencies | 0-20 | Min-Max normalized |
-| Efferent Coupling | Number of outgoing dependencies | 0-30 | Min-Max normalized |
-| Cohesion Score | Relationship between elements within method | 0-1 | Already normalized |
-| Abstraction Level | Level of abstraction vs concrete implementation | 0-1 | Already normalized |
-| Pattern Usage | Number of design patterns used | 0-5 | Min-Max normalized |
+| Metric Name | Description |
+|-------------|-------------|
+| SRP Score | Single Responsibility Principle adherence |
+| Afferent Coupling | Number of incoming dependencies |
+| Efferent Coupling | Number of outgoing dependencies |
+| Cohesion Score | Relationship between elements within method |
+| Abstraction Level | Level of abstraction vs concrete implementation |
+| Pattern Usage | Number of design patterns used |
 
 ## 3. CODE QUALITY METRICS
 
