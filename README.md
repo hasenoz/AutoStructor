@@ -42,9 +42,22 @@ AutoStructor: A Generative AI-Based Framework for Automated Program Repair with 
 | Reusability Score | Code reusability potential |
 | Error Handling | Quality of error handling implementation |
 
-## Summary
+## Implementation Details
 
-- **Total Metrics**: 21 quality metrics
-- **Processing**: All metrics are normalized
-- **Integration**: Combined with dependency graph and code change information as features
-- **Purpose**: Enhance fault localization accuracy in software systems
+### Normalization Thresholds
+| Metric Category | Threshold Values |
+|----------------|------------------|
+| **Complexity Metrics** | Cyclomatic/Cognitive: (1,20), Nesting: (1,10), Method Length: (1,100), Parameters: (0,10), Return: (1,10) |
+| **Coupling Metrics** | Afferent: (0,20), Efferent: (0,30) |
+| **Quality Metrics** | Code Smells: (0,10), Magic Numbers: (0,10), Pattern Usage: (0,5) |
+
+### Quality Score Calculation Rules
+| Score Type | Calculation Method |
+|------------|-------------------|
+| **Reusability Score** | Generic implementation: +0.2, Interface usage: +0.2, Low coupling (≤5): +0.3, High cohesion (>0.7): +0.3 |
+| **Error Handling** | Try-catch usage: +0.4, Input validation: +0.3, Specific exceptions: +0.3 |
+
+## Summary
+- **Total Metrics**: 21 quality metrics across 4 categories
+- **Integration**: Combined with dependency graph and code change information as neural network features
+- **Purpose**: Enhance fault localization accuracy by incorporating software quality characteristics
